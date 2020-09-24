@@ -3,11 +3,14 @@ package com.example.forex;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author xugang
+ */
 @SpringBootApplication
 public class ForexApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ForexApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ForexApplication.class, args);
+    }
 
 }
