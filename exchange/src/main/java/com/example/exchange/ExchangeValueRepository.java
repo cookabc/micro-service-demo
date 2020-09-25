@@ -1,4 +1,4 @@
-package com.example.forex;
+package com.example.exchange;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

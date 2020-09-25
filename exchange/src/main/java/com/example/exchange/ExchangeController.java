@@ -1,4 +1,4 @@
-package com.example.forex;
+package com.example.exchange;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -15,7 +15,7 @@ import java.util.Objects;
  * @create: 2020/9/24
  */
 @RestController
-public class ForexController {
+public class ExchangeController {
 
     @Autowired
     private Environment environment;

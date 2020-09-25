@@ -1,4 +1,4 @@
-package com.example.forex;
+package com.example.exchange;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
