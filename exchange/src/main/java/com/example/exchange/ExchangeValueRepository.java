@@ -10,5 +10,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface ExchangeValueRepository extends JpaRepository<ExchangeValue, Long> {
 
+    /**
+     * Interface for value exchange
+     *
+     * @param from from currency
+     * @param to   to currency
+     * @return ExchangeValue
+     */
     ExchangeValue findByFromAndTo(String from, String to);
 }
