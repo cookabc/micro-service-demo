@@ -22,10 +22,10 @@ import java.util.Map;
 @RestController
 public class CurrencyConversionController {
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     private CurrencyExchangeServiceProxy proxy;
-
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping("/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversionBean convertCurrencyFeign(@PathVariable String from, @PathVariable String to,
