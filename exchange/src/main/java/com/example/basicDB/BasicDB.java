@@ -1,4 +1,4 @@
-package com.example.basicdb;
+package com.example.basicDB;
 
 import java.io.*;
 import java.util.ArrayDeque;
@@ -141,7 +141,7 @@ public class BasicDB {
 
     private void loadIndex(DataInputStream in) throws IOException {
         int size = in.readInt();
-        indexMap = new HashMap<String, Long>((int) (size / 0.75f) + 1, 0.75f);
+        indexMap = new HashMap<>((int) (size / 0.75f) + 1, 0.75f);
         for (int i = 0; i < size; i++) {
             String key = in.readUTF();
             long index = in.readLong();

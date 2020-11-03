@@ -1,4 +1,4 @@
-package com.example.basicdb;
+package com.example.basicDB;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
