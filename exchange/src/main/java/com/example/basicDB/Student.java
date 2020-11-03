@@ -1,5 +1,7 @@
 package com.example.basicDB;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -21,15 +23,13 @@ import java.util.Map;
 public class Student implements Serializable {
 
     String name;
-
     int age;
-
     double score;
 
-    public Student() {
-    }
-
-    public Student(String name, int age, double score) {
+    @JsonCreator
+    public Student(@JsonProperty("name") String name,
+                   @JsonProperty("age") int age,
+                   @JsonProperty("score") double score) {
         this.name = name;
         this.age = age;
         this.score = score;
@@ -169,10 +169,9 @@ public class Student implements Serializable {
         Map<String, Double> scores;
         ContactInfo contactInfo;
 
-        public ComplexStudent() {
-        }
-
-        public ComplexStudent(String name, int age) {
+        @JsonCreator
+        public ComplexStudent(@JsonProperty("name") String name,
+                              @JsonProperty("age") int age) {
             this.name = name;
             this.age = age;
         }
